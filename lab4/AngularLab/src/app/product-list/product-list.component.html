@@ -15,7 +15,9 @@
   
   <button type="button"><a [href]="product.link"></a>Open Page</button>
 
-  <button type="button" (click)="share(product)">Share</button>
+  <button type="button" (click)="shareTelegram(product)">Share in Telegram</button>
+
+  <button class="whatsapp" type="button" (click)="shareWhatsapp(product)">Share in Whatsapp</button>
 
   <app-product-alerts [product]="product" (notify)="onNotify()">
   </app-product-alerts>

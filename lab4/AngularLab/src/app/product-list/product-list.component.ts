@@ -14,11 +14,15 @@ export class ProductListComponent {
 
   products = [...products];
 
-  share(products: Product) {
-    const telegramUrl = `https://t.me/share/url?url=${encodeURIComponent(products.link)}`;
+  shareTelegram(products: Product) {
+    const telegramUrl = 'https://t.me/share/url?url=${encodeURIComponent(products.link)}';
     window.open(telegramUrl, '_blank');
   }
   
+  shareWhatsapp(product: Product){
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent('Check out this product!')}%20${encodeURIComponent(product.link)}`;
+    window.open(whatsappUrl, '_blank')
+  }
 
 
   onNotify() {
