@@ -13,7 +13,7 @@
   <p *ngIf="product.rating"> Rating {{product.rating}}/5</p>
 
   
-  <button type="button"><a [href]="product.link">Open Page</a></button>
+<a [href]="product.link"><button>Open Page</button></a>
 
   <button type="button" (click)="shareTelegram(product)">Share in Telegram</button>
 
