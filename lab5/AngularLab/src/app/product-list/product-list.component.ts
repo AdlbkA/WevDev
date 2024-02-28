@@ -45,16 +45,10 @@ export class ProductListComponent implements OnInit{
   }
 
   onDeleteProduct(productDelete: Product) {
-    console.log(this.products);
-    
-    // Удалить продукт из массива
-    // this.products.splice(productId, 1);
     const index = this.products.findIndex(product => product === productDelete);
     if (index !== -1) {
       this.products.splice(index, 1);
     }
-    // this.products = this.products.splice(index-1, 1);
-    console.log(this.products);
   }
 }
 
