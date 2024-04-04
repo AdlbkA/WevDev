@@ -29,7 +29,6 @@ def get_products_by_id(request, id):
 
 
 def get_products_by_category(request, id):
-    # get_category_by_id(request, id)
     products = Product.objects.filter(category_id=id)
     products_json = [product.to_json() for product in products]
     return JsonResponse(products_json, safe=False)
